@@ -3,6 +3,10 @@ from streamlit_gsheets import GSheetsConnection
 import pandas as pd
 
 #Membuat Judul
+st.set_page_config(page_icon="Icon.png", page_title="Catatan Keuangan")
+col1, col2, col3 = st.columns(3)
+with col2:
+    st.image("Logo Gunadar.jpg", use_container_width=True)
 st.title("Catatan Keuangan")
 st.markdown("Masukkan Rincian Keuangan Anda")
 
