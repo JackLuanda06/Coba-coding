@@ -71,4 +71,4 @@ with st.form(key="Form Pengguna"):
             conn.update(worksheet="Catatan", data=update_data)
 
             st.success("Data Berhasil Ditambahkan")
-            st.balloons()
+            
