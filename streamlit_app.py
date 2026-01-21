@@ -40,7 +40,7 @@ with st.form(key="Form Pengguna"):
 
     st.markdown("*Diperlukan")
 
-    submit_button = st.form_submit_button(label="Submit")
+    submit_button = st.form_submit_button(label="Submit", type="primary")
 
     if submit_button:
         #Cek Ketentuan Form
