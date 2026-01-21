@@ -57,7 +57,7 @@ with st.form(key="Form Pengguna"):
                     {
                         "Nama Pengguna": nama_pengguna,
                         "Jenis Tabungan": jenis_tabungan,
-                        "Bank Tujuan": bank_tujuan,
+                        "Bank": bank_tujuan,
                         "Nominal": nominal_tabungan,
                         "Tanggal": tanggal_input.strftime("%Y-%m-%d"),
                         "Info Tambahan": info_tambahan,
@@ -71,3 +71,4 @@ with st.form(key="Form Pengguna"):
             conn.update(worksheet="Catatan", data=update_data)
 
             st.success("Data Berhasil Ditambahkan")
+            st.balloons()
