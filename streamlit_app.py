@@ -38,7 +38,7 @@ with st.form(key="Form Pengguna"):
     tanggal_input = st.date_input(label="Tanggal Hari Ini")
     info_tambahan = st.text_area(label="Informasi")
 
-    st.markdown("**Diperlukan*")
+    st.markdown("*Diperlukan")
 
     submit_button = st.form_submit_button(label="Submit")
 
@@ -47,7 +47,7 @@ with st.form(key="Form Pengguna"):
         if not nama_pengguna or not jenis_tabungan:
             st.warning("Data Belum Lengkap")
             st.stop()
-        elif existing_data["Nama Pengguna"].str.contains(nama_pengguna).any():
+        elif existing_data["Nama Pengguna"].astype(str).str.contains(nama_pengguna, na=False).any():
             st.warning("Nama Sudah Terdaftar")
             st.stop()
         else:
@@ -71,4 +71,4 @@ with st.form(key="Form Pengguna"):
             conn.update(worksheet="Catatan", data=update_data)
 
             st.success("Data Berhasil Ditambahkan")
-            
+            st.balloons()
